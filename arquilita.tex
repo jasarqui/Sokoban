@@ -1,0 +1,35 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+
+\topmargin -20mm
+\textheight 225mm
+
+\title{\bf SOKOBAN: Solving with Brute Force Algorithms}
+\author{Jasper Ian Z. Arquilita\\
+\small University of the
+Philippines Los Ba\~{n}os}
+\date{\small February 2018} % or \date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+Brute force algorithms are algorithms in Computer Science that exhausts all possible values until it reaches a certain goal. There are two popular algorithms that does this: Breadth-first Search Algorithm and Depth-first Search Algorithm.
+
+The main difference between the two is that the BFS uses a Queue (which uses the principle of First In First Out) and the DFS uses a Stack (which uses the principle Last In First Out). But why?
+
+BFS is an algorithm that exhausts possible values level by level, which in turn trades off more memory until it reaches a goal. DFS in turn, is an algorithm that exhausts possible values by following possible paths of values one by one until it reaches a goal. This in turn makes it faster for DFS to solve a problem if it follows the correct path, whilst BFS effectively yet not efficiently finds a goal. This makes DFS unreliable because it sometimes does not find a goal when certain conditions are not met.
+
+The graph below shows a BFS vs DFS line chart regarding a speedtest for solving Sokoban with 2 boxes.
+
+\begin{figure}
+\begin{center}
+	\includegraphics[height=35mm]{./graph.png}
+	\caption{Trial Times}
+\end{center}
+\end{figure}
+
+It shows that DFS effectively finds its goal faster at the start, but decreases solve time per trial slower. BFS on the other hand, solves the puzzle slower at the start, but has better decrease in solve time per trial.
+
+\end{document}
